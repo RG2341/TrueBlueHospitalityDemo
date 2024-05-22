@@ -67,26 +67,9 @@
     padding: 10px 0;
   }
 
-  .slideshow-container {
-    position: relative;
-    margin: auto;
-    height: 60vh;
-  }
-
-  .mySlides {
-    display: none;
-    height: 100%;
-  }
-
-  .mySlides img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-  }
-  .bgimg-1 {
+.bgimg-1 {
   background-position: center;
-  background-size: cover;
+  background-size: cover; /* Ensure the image covers the entire area */
   background-repeat: no-repeat;
   background-image: url(https://i.imgur.com/odgUFFY.jpeg);
   height: 50vh;
@@ -95,6 +78,29 @@
   justify-content: center;
   align-items: center;
   text-align: center; /* Ensure text is centered */
+  overflow: hidden; /* Prevent image from overflowing */
+}
+
+@media (max-width: 600px) {
+  .bgimg-1 {
+    background-size: cover; /* Adjust background size */
+    height: 70vh; /* Adjust height for smaller screens if needed */
+  }
+
+  .centered-text span {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 10px; /* Add some padding for better spacing */
+  }
+}
+
+.slideshow-container {
+  width: 100%;
+  max-width: 100%; /* Ensure the slideshow doesn't exceed the container width */
+}
+
+.mySlides img {
+  width: 100%; /* Ensure images fit within the slideshow container */
+  height: auto; /* Maintain aspect ratio */
 }
 
   .shadow-box {
