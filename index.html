@@ -67,31 +67,48 @@
     padding: 10px 0;
   }
 
-.bgimg-1 {
-  background-position: center;
-  background-size: cover; /* Ensure the image covers the entire area */
-  background-repeat: no-repeat;
-  background-image: url(https://i.imgur.com/odgUFFY.jpeg);
-  height: 50vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Ensure text is centered */
-  overflow: hidden; /* Prevent image from overflowing */
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+    height: 60vh;
+  }
+
+  .mySlides {
+    display: none;
+    height: 100%;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://i.imgur.com/odgUFFY.jpeg);
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: none;
 }
 
 @media (max-width: 600px) {
-  .bgimg-1 {
-    background-size: cover; /* Adjust background size */
-    height: 70vh; /* Adjust height for smaller screens if needed */
-  }
+    .bgimg-1 {
+        height: 70vh; /* Adjust height for smaller screens if needed */
+    }
 
-  .centered-text span {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    padding: 10px; /* Add some padding for better spacing */
-  }
+    .centered-text span {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
 }
+
 
   .shadow-box {
     box-shadow: 0 -8px 16px rgba(2, 0, 0, 0.0);
@@ -160,6 +177,7 @@ ul {
   filter: none !important;
 }
 
+
 </style>
 </head>
 <body>
@@ -182,18 +200,28 @@ ul {
   </div>
 </div>
 
+
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-center">
     <div class="slideshow-container">
       <div class="mySlides">
         <img src="TBHMain.JPG" alt="Image 1">
       </div>
+      <div class="mySlides">
+        <img src="AndrewPinckney.jpeg" alt="Image 2">
+      </div>
+      <div class="mySlides">
+        <img src="CambriaFM.jpeg" alt="Image 3">
+      </div>
+      <div class="mySlides">
+        <img src="Charleston+Night.jpg" alt="Image 4">
+      </div>
     </div>
     <div class="centered-text">
     </div>
   </div>
 </header>
-  
+
 <div class="w3-container w3-light-grey shadow-box" style="padding:128px 16px;" id="services">
   <div class="w3-padding-16"><span class="w3-xlarge w3-border-blue w3-bottombar">Our Services</span></div>
   <h3>Click to learn more about any service.</h3>
